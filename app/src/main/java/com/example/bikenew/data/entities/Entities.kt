@@ -95,7 +95,8 @@ data class ServiceOrder(
     @PrimaryKey(autoGenerate = true) val id: Long = 0,
     val bikeId: Long,
     val description: String,
-    val status: String, // PENDING, IN_PROGRESS, COMPLETED
+    val status: String, // QUOTE, APPROVED, IN_PROGRESS, COMPLETED, CANCELLED
     val price: Double,
-    val date: Long = System.currentTimeMillis()
+    val date: Long = System.currentTimeMillis(),
+    val isQuote: Boolean = true
 )
